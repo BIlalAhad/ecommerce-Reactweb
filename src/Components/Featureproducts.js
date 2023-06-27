@@ -8,7 +8,7 @@ import { useContext } from 'react';
 export default function Featureproducts() {
   const [users,setUsers]=useContext(Items);
     const fetchUserData = () => {
-        fetch("http://localhost:3000/data.json")
+        fetch("data.json")
           .then(response => {
             return response.json()
           })
