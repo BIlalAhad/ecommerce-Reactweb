@@ -5,7 +5,7 @@ import Count from '../Context/Count';
 export default function Products() {
   const [allproducts,setAllproducts]=useState([]);
   const fetchUserData = () => {
-      fetch("http://localhost:3000/data.json")
+      fetch("data.json")
         .then(response => {
           return response.json()
         })
