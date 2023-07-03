@@ -2,7 +2,7 @@ import React from 'react'
 import Hero from './Hero'
 import Trusted from './Trusted'
 import Trust from './Trust'
-import Featureproducts from './Featureproducts'
+import FeaturedProducts from './FeaturedProducts'
 import { useContext } from 'react'
 import App from '../App'
 
@@ -17,7 +17,7 @@ export default function Home() {
       </div>
       <div className='p-3'>
       <Hero/>
-      <Featureproducts/>
+      <FeaturedProducts/>
       <Trust/>
       </div>
       <Trusted />

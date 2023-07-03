@@ -5,7 +5,7 @@ import Items from '../Context/Items';
 import { useContext } from 'react';
 
 
-export default function Featureproducts() {
+export default function FeaturedProducts() {
   const [searchdata,setSearchdata] =useState('');
   const [users,setUsers]=useContext(Items);
     const fetchUserData = () => {
