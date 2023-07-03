@@ -22,6 +22,10 @@ export default function Products() {
       setAdd([...Add,items]);  
 
     }
+    const [page,setPage] =useState(1);
+    function handlepagination(selected){
+      setPage(selected+1);
+    }
 
   return (
     <>
@@ -31,8 +35,7 @@ export default function Products() {
       </div>
     <section  className='p-3 grid gap-2 sm:gap-10 grid-cols-2 sm:grid-cols-5 py-20 max-w-7xl mx-auto'> 
         {
-            allproducts
-            .map((items,index)=>{
+            allproducts.slice(page*5-5,page*5).map((items,index)=>{
                 return(
                     <div className='border-2 shadow-xl border-gray-300 p-3 bg-gray-50'>
                         <img className='w-[150px] h-[150px]' src={items.image} alt='img' />
@@ -45,6 +48,15 @@ export default function Products() {
             })
         }
     </section>
+    {
+      <section className='text-center p-5 space-x-4'>
+        <span className='text-2xl hover:cursor-pointer'>⏮</span>
+        {[...Array(allproducts.length/5)].map((_,i)=>{
+          return (<span className='hover:cursor-pointer' onClick={()=>handlepagination(i)}>{i+1}</span>)
+        })}
+        <span className='text-2xl hover:cursor-pointer'>⏭</span>
+      </section>
+    }
 
     </>
   )

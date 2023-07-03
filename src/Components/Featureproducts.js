@@ -41,7 +41,7 @@ export default function Featureproducts() {
               }else if(items.title.toLowerCase().includes(searchdata.toLocaleLowerCase())){
                 return items
               }
-            }) .map((items,index)=>{
+            }).map((items,index)=>{
                 return(
                     <div className='border-2 shadow-xl border-gray-300 p-3 bg-gray-50'>
                         <img className='w-[150px] h-[150px]' src={items.image} alt='img' />
