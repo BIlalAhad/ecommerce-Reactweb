@@ -6,6 +6,7 @@ import { useContext } from 'react';
 
 
 export default function Featureproducts() {
+  const [searchdata,setSearchdata] =useState('');
   const [users,setUsers]=useContext(Items);
     const fetchUserData = () => {
         fetch("data.json")
@@ -27,9 +28,20 @@ export default function Featureproducts() {
       
   return (
     <>
+     <section className='max-w-5xl mx-auto'>
+      <input className=' mx-auto mt-10 p-3 px-8 w-full bg-blue-900 rounded-md border-2 border-blue-400 text-white' type='search' placeholder='Search here ...' onChange={(e)=>{
+        setSearchdata(e.target.value)
+      }}/>
+      </section>
     <section  className='grid gap-2 sm:gap-10 grid-cols-2 sm:grid-cols-4 py-20 max-w-5xl mx-auto'> 
         {
-            users.map((items,index)=>{
+            users.filter((items)=>{
+              if(searchdata==""){
+                return items
+              }else if(items.title.toLowerCase().includes(searchdata.toLocaleLowerCase())){
+                return items
+              }
+            }) .map((items,index)=>{
                 return(
                     <div className='border-2 shadow-xl border-gray-300 p-3 bg-gray-50'>
                         <img className='w-[150px] h-[150px]' src={items.image} alt='img' />

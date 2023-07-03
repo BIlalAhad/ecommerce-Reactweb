@@ -45,7 +45,7 @@ export default function Cart() {
           )
         })
       }
-      <h2 className='max-w-6xl p-6 my-10 mx-auto text-center text-3xl font-serif shadow shadow-gray-700 rounded-t-full'><span className="text-blue-700">Total: </span>{totalcartprice}/-</h2>
+      <h2 className='max-w-6xl p-6 my-10 mx-auto text-center text-3xl font-serif shadow shadow-gray-700 '><span className="text-blue-700">Total: </span>{totalcartprice}/-</h2>
     </div>
   )
 }

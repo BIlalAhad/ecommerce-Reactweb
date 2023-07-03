@@ -3,6 +3,7 @@ import { useContext } from 'react';
 import Count from '../Context/Count';
 
 export default function Products() {
+ 
   const [allproducts,setAllproducts]=useState([]);
   const fetchUserData = () => {
       fetch("data.json")
@@ -21,7 +22,6 @@ export default function Products() {
       setAdd([...Add,items]);  
 
     }
-  
 
   return (
     <>
@@ -29,10 +29,10 @@ export default function Products() {
         <img className="w-full  relative brightness-50  -mt-20 h-96 object-cover" src="products.avif" alt="img" />
         <h2 className="absolute text-6xl sm:top-56 w-full text-white font-serif text-center ">All Products</h2>
       </div>
-    <div className='mb-20 mt-20 '></div>
     <section  className='p-3 grid gap-2 sm:gap-10 grid-cols-2 sm:grid-cols-5 py-20 max-w-7xl mx-auto'> 
         {
-            allproducts.map((items,index)=>{
+            allproducts
+            .map((items,index)=>{
                 return(
                     <div className='border-2 shadow-xl border-gray-300 p-3 bg-gray-50'>
                         <img className='w-[150px] h-[150px]' src={items.image} alt='img' />
