@@ -1,10 +1,12 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Count from '../Context/Count'
 import Items from '../Context/Items'
+import '../App.css';
 
 export default function FeaturedProducts() {
   const [products, setProducts] = useContext(Items)
   const [cart, setCart] = useContext(Count)
+  const [searchdata,setSearchdata]=useState('');
 
   const fetchUserData = () => {
     fetch('data.json')
@@ -25,13 +27,24 @@ export default function FeaturedProducts() {
   }
 
   return (
-    <>
-      <section className='grid gap-10 grid-cols-4 py-20 max-w-5xl mx-auto'>
-        {products.map((item) => {
+    <> 
+    <section className='max-w-5xl mx-auto'>
+    <input className=' mx-auto mt-10 p-3 px-8 w-full bg-blue-900 rounded-md border-2 border-blue-400 text-white' type='search' placeholder='Search here ...' onChange={(e)=>{
+      setSearchdata(e.target.value)
+    }}/>
+    </section>
+      <section className='grid gap-3 sm:gap-10 grid-cols-2 sm:grid-cols-4 py-20 max-w-5xl mx-auto'>
+        {products.filter((items)=>{
+              if(searchdata==""){
+                return items
+              }else if(items.title.toLowerCase().includes(searchdata.toLocaleLowerCase())){
+                return items
+              }
+            }).map((item) => {
           return (
             <div
               key={item.id}
-              className='border-2 shadow-xl border-gray-300 p-3 bg-gray-50'
+              className='border-2 shadow-2xl border-gray-300 p-3  card'
             >
               <img className='w-[150px] h-[150px]' src={item.image} alt='img' />
               <h2 className='font-bold text-lg text-blue-800 py-2 h-[120px]'>

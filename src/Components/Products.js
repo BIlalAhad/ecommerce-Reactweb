@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useContext } from 'react';
 import Count from '../Context/Count';
+import '../App.css'
 
 export default function Products() {
  
@@ -37,7 +38,7 @@ export default function Products() {
         {
             allproducts.slice(page*5-5,page*5).map((items,index)=>{
                 return(
-                    <div className='border-2 shadow-xl border-gray-300 p-3 bg-gray-50'>
+                    <div className='border-2 shadow-xl border-gray-300 p-3 bg-gray-50 card'>
                         <img className='w-[150px] h-[150px]' src={items.image} alt='img' />
                         <h2 className='sm:font-bold text-lg text-blue-800 py-2 h-[120px]'>{items.title}</h2>
                         <span className='text-right '>Rs:-{items.price}</span>
@@ -50,11 +51,11 @@ export default function Products() {
     </section>
     {
       <section className='text-center p-5 space-x-4'>
-        <span className='text-2xl hover:cursor-pointer'>⏮</span>
+        <span className='text-4xl hover:cursor-pointer font-bold '>↩</span>
         {[...Array(allproducts.length/5)].map((_,i)=>{
           return (<span className='hover:cursor-pointer' onClick={()=>handlepagination(i)}>{i+1}</span>)
         })}
-        <span className='text-2xl hover:cursor-pointer'>⏭</span>
+        <span className='text-4xl hover:cursor-pointer font-bold '>↪</span>
       </section>
     }
 

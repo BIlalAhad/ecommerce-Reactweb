@@ -20,15 +20,16 @@ import Addtocart from './Context/Addtocart';
 
 function App() {
   const [Add, setAdd] = useState([])
-  const [users, setUsers] = useState([])
+  const [products,setProducts] = useState([])
 
 
   return (
     <>
 
-    <BrowserRouter>
+   <section className=''>
+   <BrowserRouter>
     <Addtocart.Provider value=''>
-    <Items.Provider value={[users,setUsers]}>
+    <Items.Provider value={[products,setProducts]}>
         <Count.Provider value={[Add,setAdd]} >
           <Header/>
             <Routes >
@@ -46,6 +47,7 @@ function App() {
         </Items.Provider> 
         </Addtocart.Provider>   
     </BrowserRouter>
+   </section>
     </>
   );
 }
