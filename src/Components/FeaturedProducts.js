@@ -25,6 +25,7 @@ export default function FeaturedProducts() {
   const addItem = (item) => {
     setCart([...cart, item])
   }
+ 
 
   return (
     <> 
@@ -33,7 +34,8 @@ export default function FeaturedProducts() {
       setSearchdata(e.target.value)
     }}/>
     </section>
-      <section className='grid gap-3 sm:gap-10 grid-cols-2 sm:grid-cols-4 py-20 max-w-5xl mx-auto'>
+      <section>
+      <section className='grid gap-3 sm:gap-10 grid-cols-2 sm:grid-cols-4 py-20 max-w-5xl mx-auto relative'>
         {products.filter((items)=>{
               if(searchdata==""){
                 return items
@@ -44,7 +46,7 @@ export default function FeaturedProducts() {
           return (
             <div
               key={item.id}
-              className='border-2 shadow-2xl border-gray-300 p-3  card'
+              className='border-2 shadow-2xl border-gray-300 p-3  card '
             >
               <img className='w-[150px] h-[150px]' src={item.image} alt='img' />
               <h2 className='font-bold text-lg text-blue-800 py-2 h-[120px]'>
@@ -63,6 +65,8 @@ export default function FeaturedProducts() {
             </div>
           )
         })}
+     
+      </section>
       </section>
     </>
   )
