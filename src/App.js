@@ -15,13 +15,17 @@ import { createContext, useState } from 'react';
 import Count from './Context/Count';
 import Items from './Context/Items';
 import Addtocart from './Context/Addtocart';
+import Adminheader from './Components/Adminheader';
+import Admin from './Components/Admin';
 
 
 
 function App() {
   const [Add, setAdd] = useState([])
   const [products,setProducts] = useState([])
+  const token=localStorage.getItem('email');
 
+ 
 
   return (
     <>
@@ -31,6 +35,29 @@ function App() {
     <Addtocart.Provider value=''>
     <Items.Provider value={[products,setProducts]}>
         <Count.Provider value={[Add,setAdd]} >
+        {(() => {
+              if (token == 'test@gmail.com'){
+                  return (
+                    <>
+                    <Adminheader/>
+                    <Header/>
+                    <Routes >
+                        <Route path="/" element={<Home />} />
+                        <Route path="Products" element={<Products />} />
+                        <Route path="About" element={<About />} />
+                        <Route path="Contact" element={<Contact/>} />
+                        <Route path="Contact" element={<Contact/>} />
+                        <Route path="Login" element={<Login />} />
+                        <Route path="cart" element={<Cart/>} />
+                        <Route path="Admin" element={<Admin/>} />
+                        <Route path="*" element={<NoPage />} />
+                    </Routes>
+                    </>
+                  )
+              }
+              
+              return (
+                <>
           <Header/>
             <Routes >
                 <Route path="/" element={<Home />} />
@@ -40,8 +67,14 @@ function App() {
                 <Route path="Contact" element={<Contact/>} />
                 <Route path="Login" element={<Login />} />
                 <Route path="cart" element={<Cart/>} />
+                <Route path="Admin" element={<Admin/>} />
                 <Route path="*" element={<NoPage />} />
             </Routes>
+                
+                </>
+              );
+            })()}
+          
           <Footer/>
         </Count.Provider>
         </Items.Provider> 

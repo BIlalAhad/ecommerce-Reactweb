@@ -6,7 +6,7 @@ export default function Contact() {
    <section className='m-3'>
    <div>
         <img className="w-full  relative brightness-50  -mt-20 h-96 object-cover" src="contact.avif" alt="img" />
-        <h2 className="absolute text-6xl sm:top-56 w-full text-white font-serif text-center ">Contact Us</h2>
+        <h2 className="absolute text-6xl sm:top-56 w-full mt-28 text-white font-serif text-center ">Contact Us</h2>
       </div>
     <div className='mb-20 mt-20  '>
       

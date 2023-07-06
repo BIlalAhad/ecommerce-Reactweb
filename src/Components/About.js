@@ -13,7 +13,7 @@ export default function About() {
     <div>
       <div>
         <img className="w-full  relative brightness-50  -mt-20 h-96 object-cover" src="about.avif" alt="img" />
-        <h2 className="absolute text-6xl  sm:top-56 w-full text-white font-serif text-center  ">About Us</h2>
+        <h2 className="absolute text-6xl  sm:top-56 w-full mt-28 text-white font-serif text-center  ">About Us</h2>
       </div>
       <section className="max-w-6xl mx-auto my-24">
         <div>

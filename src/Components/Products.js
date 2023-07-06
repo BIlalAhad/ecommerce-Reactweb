@@ -56,7 +56,7 @@ export default function Products() {
      <section id='blur' className=''>
      <div id='#scrolltcard'>
         <img className="w-full  relative brightness-50  -mt-20 h-96 object-cover" src="products.avif" alt="img" />
-        <h2 className="absolute text-6xl sm:top-56 w-full text-white font-serif text-center ">All Products</h2>
+        <h2 className="absolute text-6xl sm:top-56 w-full mt-28 text-white font-serif text-center ">All Products</h2>
       </div>
     <section  className='p-3 grid gap-2 sm:gap-10 grid-cols-2 sm:grid-cols-5 py-20 max-w-7xl mx-auto'> 
         {

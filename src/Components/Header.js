@@ -10,13 +10,14 @@ import Count from '../Context/Count'
 
 
 export default function Header() {
+  const token=localStorage.getItem('email');
   const [Add,setAdd]=useContext(Count);
  function hamburger(){
   const navitems=document.getElementById('navbar')
   navitems.classList.toggle('hidden');
  }
   return (
-    <div className=' mb-20'>
+    <div className=' mb-20 '>
       <section className='sm:flex  justify-between items-center px-12 py-4 bg-blue-950 text-white '>
         <img className=' -mt-4 sm:mt-0 -ml-10 sm:ml-0 w-40 rounded-full ' src="logo.png" alt=""></img>
       
@@ -26,7 +27,15 @@ export default function Header() {
                 <NavLink to='/Products' className='hover:border-b-4 border-white'>Products</NavLink>
                 <NavLink to='/About' className='hover:border-b-4 border-white'>About</NavLink>
                 <NavLink to='/Contact' className='hover:border-b-4 border-white'>Contact</NavLink>
-                <NavLink to='/Login' className='hover:border-b-4 border-white'><button className='p-3 bg-blue-800 text-white hover:bg-blue-700'>Log In</button></NavLink>
+                {(() => {
+              if (token == ''){
+                  return (
+                    <NavLink to='/Login' className='hover:border-b-4 border-white'><button className='p-3 bg-blue-800 text-white hover:bg-blue-700'>Log In</button></NavLink>
+                  )
+              }
+              
+              return <NavLink to='#' className='hover:border-b-4 border-white'><button className='p-3 bg-blue-800 text-white hover:bg-blue-700'>Log Out</button></NavLink>              ;
+            })()}
             </nav>
         <div className='relative'>
         <NavLink className=''  to='/cart'><BsFillCartFill className='text-3xl hover:text-blue-700  '/><p className='absolute -top-3 -right-3'>{Add.length}</p></NavLink>
