@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import Profile from './Profile'
 
 export default function admin() {
   return (
@@ -10,7 +11,7 @@ export default function admin() {
                 <NavLink to='/'>Home</NavLink>
            </div>
            <div className='border-b-4 border-white'>
-                <NavLink to='./home'>Profile</NavLink>
+           <NavLink to='/Profile'>Profile</NavLink>
            </div>
            <div className='border-b-4 border-white'>
                 <NavLink to='./home'>Settings</NavLink>

@@ -17,6 +17,7 @@ import Items from './Context/Items';
 import Addtocart from './Context/Addtocart';
 import Adminheader from './Components/Adminheader';
 import Admin from './Components/Admin';
+import Profile from './Components/Profile';
 
 
 
@@ -50,6 +51,7 @@ function App() {
                         <Route path="Login" element={<Login />} />
                         <Route path="cart" element={<Cart/>} />
                         <Route path="Admin" element={<Admin/>} />
+                        <Route path="Profile" element={<Profile/>} />
                         <Route path="*" element={<NoPage />} />
                     </Routes>
                     </>
@@ -68,6 +70,7 @@ function App() {
                 <Route path="Login" element={<Login />} />
                 <Route path="cart" element={<Cart/>} />
                 <Route path="Admin" element={<Admin/>} />
+                <Route path="Profile" element={<Profile/>} />
                 <Route path="*" element={<NoPage />} />
             </Routes>
                 
