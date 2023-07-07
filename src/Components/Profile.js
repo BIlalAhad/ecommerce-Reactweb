@@ -47,7 +47,7 @@ export default function Profile() {
             </div>
        </section>
                         <button
-        className=" w-full p-2 font-bold text-sm absolute top-5 right-5 bg-blue-800 w-16 text-white hover:bg-blue-700"
+        className=" w-16 p-1 sm:p-2 font-bold text-sm absolute sm:top-5 top-0 right-0 sm:right-5 bg-blue-800 w-16 text-white hover:bg-blue-700"
         type="button"
         onClick={() => setShowModal(true)}
       >

@@ -18,7 +18,7 @@ export default function Header() {
  }
   return (
     <div className=' mb-20 '>
-      <section className='sm:flex  justify-between items-center px-12 py-4 bg-blue-950 text-white '>
+      <section className='sm:flex  justify-between items-center px-12 py-4 bg-blue-950 text-white relative '>
         <img className=' -mt-4 sm:mt-0 -ml-10 sm:ml-0 w-40 rounded-full ' src="logo.png" alt=""></img>
       
         <div className='sm:flex items-center sm:gap-8 hidden ' id='navbar'>

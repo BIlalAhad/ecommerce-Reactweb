@@ -6,7 +6,7 @@ export default function admin() {
   return (
     <>
         <section className='relative'>
-        <aside className='bg-blue-950 space-y-3 p-8 text-white text-lg w-[22%] h-[70vh] -mt-20'>
+        <aside className='bg-blue-950 space-y-3 p-8 text-white text-lg sm:w-[22%] sm:h-[70vh] -mt-20'>
            <div className='border-b-4 border-white'>
                 <NavLink to='/'>Home</NavLink>
            </div>
@@ -18,8 +18,8 @@ export default function admin() {
            </div>
         </aside>
         
-        <section className='absolute top-10 right-10 w-[73%] '>
-            <div className='w-[100%] grid grid-cols-3  gap-10 text-center'>
+        <section className='sm:absolute sm:top-10 sm:right-10 sm:w-[73%] p-8 sm:p-0'>
+            <div className='w-[100%] grid grid-cols-2 sm:grid-cols-3  gap-10 text-center'>
             <div className='p-10 w-full  top-0  bg-gray-200 rounded-2xl border-b-4 border-blue-950'>
                 <h3 className='text-xl font-bold '>Users</h3>
                 <span>2000</span>
