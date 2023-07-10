@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function Hero() {
   return (
-    <div>
-      <section className='max-w-5xl mx-auto grid  sm:grid-cols-2 gap-8 items-center '>
+    <div className=''>
+      <section className='max-w-5xl mx-auto grid  sm:grid-cols-2 gap-8 items-center  '>
         <div>
             <span className='text-sm text-blue-800'>Welcome to</span>
             <h1 className='font-bold text-lg sm:text-4xl font-serif mb-2'>Ecommerce Shop</h1>

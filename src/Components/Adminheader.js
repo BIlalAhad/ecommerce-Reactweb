@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 export default function Adminheader() {
   return (
-    <div className='flex justify-between p-3 px-8 bg-gray-200 '>
+    <div className='flex justify-between p-3 px-8 bg-amber-500 '>
       <NavLink to='./admin'><button className='text-3xl'>Dashboard</button></NavLink>
       <div className='flex gap-7 items-center'>
         <p>Bilal Ahad</p>

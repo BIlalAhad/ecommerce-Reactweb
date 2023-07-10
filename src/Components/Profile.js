@@ -15,7 +15,7 @@ export default function Profile() {
   return (
     <>
      <section className='max-w-6xl mx-auto bg-gray-100  p-8 5 relative  mb-20 relative'>
-                <div className='grid grid-cols-2 max-w-2xl items-center gap-8'>
+                <div className='grid sm:grid-cols-2 max-w-2xl items-center gap-8'>
                     <img src='khan.jpg' alt='profile image'/>
                     <div className='space-y-2'>
                         <h2 className='font-bold text-xl'>Name : <span className='text-blue-900'> Bilal Ahad</span></h2>
@@ -25,7 +25,7 @@ export default function Profile() {
                 </div>
 
 
-       <section className='sm:flex justify-between mt-10'>
+       <section className='sm:flex max-w-lg justify-between mt-10'>
             <div className='text-lg text-gray-500 space-y-2'>
                 <h2 className='hover:text-blue-800 cursor-pointer'>Work Links</h2>
                 <h3 className='hover:text-blue-800 cursor-pointer'>

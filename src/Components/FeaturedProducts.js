@@ -2,11 +2,12 @@ import React, { useContext, useEffect, useState } from 'react'
 import Count from '../Context/Count'
 import Items from '../Context/Items'
 import '../App.css';
+import Searchbar from '../Context/Searchbar';
 
 export default function FeaturedProducts() {
   const [products, setProducts] = useContext(Items)
   const [cart, setCart] = useContext(Count)
-  const [searchdata,setSearchdata]=useState('');
+  const [searchdata,setSearchdata]=useContext(Searchbar);
 
   const fetchUserData = () => {
     fetch('data.json')
@@ -29,11 +30,7 @@ export default function FeaturedProducts() {
 
   return (
     <> 
-    <section className='max-w-5xl mx-auto'>
-    <input className=' mx-auto mt-10 p-3 px-8 w-full bg-blue-900 rounded-md border-2 border-blue-400 text-white' type='search' placeholder='Search here ...' onChange={(e)=>{
-      setSearchdata(e.target.value)
-    }}/>
-    </section>
+
       <section>
       <section className='grid gap-3 sm:gap-10 grid-cols-2 sm:grid-cols-4 py-20 max-w-5xl mx-auto relative'>
         {products.filter((items)=>{

@@ -2,6 +2,8 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import Profile from './Profile'
 
+
+
 export default function admin() {
   return (
     <>
@@ -23,6 +25,7 @@ export default function admin() {
             <div className='p-10 w-full  top-0  bg-gray-200 rounded-2xl border-b-4 border-blue-950'>
                 <h3 className='text-xl font-bold '>Users</h3>
                 <span>2000</span>
+                
             </div>
             <div className='p-10 w-full  top-0  bg-gray-200 rounded-2xl border-b-4 border-blue-950'>
                 <h3 className='text-xl font-bold '>Orders</h3>

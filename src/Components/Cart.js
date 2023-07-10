@@ -57,7 +57,7 @@ export default function Cart() {
       {cart.map((item) => {
         return (
           <div key={item.id} className='max-w-6xl mx-auto gap-10 '>
-            <div className='grid grid-cols-4 items-center gap-10 mt-8 border-b-2 border-blue-800 p-2'>
+            <div className='grid grid-cols-4 text-sm items-center sm:gap-10 mt-8 border-b-2 border-blue-800 p-2'>
               <img src={item.image} alt='img' width='60px' />
               <h2 className='text-blue-800  font-serif'>{item.title}</h2>
               <span>Price={item.quantity * item.price}</span>

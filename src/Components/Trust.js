@@ -7,7 +7,7 @@ import {MdAssignmentReturn} from "react-icons/md";
 
 export default function Trust() {
   return (
-    <div className='max-w-5xl mx-auto sm:flex justify-between sm:my-32 gap-5   '>
+    <div className='max-w-5xl mx-auto sm:flex justify-between sm:my-32 gap-5 bg-amber-500  '>
      
       <div className='flex items-center gap-5 rounded-md  bg-gray-200 py-14 px-20 trust'>
        <div className='text-5xl text-black '>

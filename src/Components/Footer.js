@@ -35,7 +35,7 @@ export default function Footer() {
         </div>
         <hr/>
     </section>
-        <p className='p-3 text-center'>&copy;Developer Bilal Ahad </p>
+        <p className='p-3 text-center bg-amber-500'>&copy;Developer Bilal Ahad </p>
         </>
   )
 }

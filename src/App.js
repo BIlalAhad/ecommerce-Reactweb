@@ -18,12 +18,16 @@ import Addtocart from './Context/Addtocart';
 import Adminheader from './Components/Adminheader';
 import Admin from './Components/Admin';
 import Profile from './Components/Profile';
+import Aside from './Components/Aside';
+import Searchbar from './Context/Searchbar';
+
 
 
 
 function App() {
   const [Add, setAdd] = useState([])
   const [products,setProducts] = useState([])
+  const [searchdata,setSearchdata] = useState([])
   const token=localStorage.getItem('email');
 
  
@@ -33,6 +37,7 @@ function App() {
 
    <section className=''>
    <BrowserRouter>
+    <Searchbar.Provider value={[searchdata,setSearchdata]}>
     <Addtocart.Provider value=''>
     <Items.Provider value={[products,setProducts]}>
         <Count.Provider value={[Add,setAdd]} >
@@ -46,7 +51,6 @@ function App() {
                         <Route path="/" element={<Home />} />
                         <Route path="Products" element={<Products />} />
                         <Route path="About" element={<About />} />
-                        <Route path="Contact" element={<Contact/>} />
                         <Route path="Contact" element={<Contact/>} />
                         <Route path="Login" element={<Login />} />
                         <Route path="cart" element={<Cart/>} />
@@ -81,7 +85,8 @@ function App() {
           <Footer/>
         </Count.Provider>
         </Items.Provider> 
-        </Addtocart.Provider>   
+        </Addtocart.Provider>  
+        </Searchbar.Provider>
     </BrowserRouter>
    </section>
     </>
