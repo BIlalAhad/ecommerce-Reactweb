@@ -61,13 +61,7 @@ export default function Products() {
       </div>
     <section  className='p-3 grid gap-2 sm:gap-10 grid-cols-2 sm:grid-cols-5 py-20 max-w-7xl mx-auto'> 
         {
-            allproducts.filter((items)=>{
-              if(searchdata==""){
-                return items
-              }else if(items.title.toLowerCase().includes(searchdata.toLocaleLowerCase())){
-                return items
-              }
-            }).slice(page*5-5,page*5).map((items,index)=>{
+            allproducts.slice(page*5-5,page*5).map((items,index)=>{
                 return(
                     <div className='border-2 shadow-xl border-gray-300 p-3 bg-gray-50 card'>
                         <img className='w-[150px] h-[150px]' src={items.image} alt='img' />

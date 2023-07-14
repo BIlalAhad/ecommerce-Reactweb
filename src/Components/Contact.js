@@ -3,7 +3,7 @@ import React from 'react'
 export default function Contact() {
   return (
     <> 
-   <section className='m-3'>
+   <section className=''>
    <div>
         <img className="w-full  relative brightness-50  -mt-20 h-96 object-cover" src="contact.avif" alt="img" />
         <h2 className="absolute text-6xl sm:top-56 w-full mt-28 text-white font-serif text-center ">Contact Us</h2>

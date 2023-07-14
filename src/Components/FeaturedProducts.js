@@ -33,13 +33,15 @@ export default function FeaturedProducts() {
 
       <section>
       <section className='grid gap-3 sm:gap-10 grid-cols-2 sm:grid-cols-4 py-20 max-w-5xl mx-auto relative'>
-        {products.filter((items)=>{
-              if(searchdata==""){
-                return items
-              }else if(items.title.toLowerCase().includes(searchdata.toLocaleLowerCase())){
-                return items
-              }
-            }).map((item) => {
+        {products
+        // .filter((items)=>{
+        //       if(searchdata==""){
+        //         return items
+        //       }else if(items.title.toLowerCase().includes(searchdata.toLocaleLowerCase())){
+        //         return items
+        //       }
+        //     })
+            .map((item) => {
           return (
             <div
               key={item.id}

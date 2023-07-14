@@ -63,7 +63,7 @@ export default function Cart() {
               <span>Price={item.quantity * item.price}</span>
               <div className='flex items-center gap-3'>
                 <button
-                  className='p-2 bg-blue-800 text-white font-bold w-8 hover:bg-blue-600'
+                  className='p-2 bg-blue-800 rounded-md text-white font-bold w-8 hover:bg-blue-600'
                   onClick={() => {
                     decrement(item)
                   }}
@@ -72,7 +72,7 @@ export default function Cart() {
                 </button>
                 <p className='p-2'>{item.quantity}</p>
                 <button
-                  className='p-2 bg-blue-800 text-white font-bold w-8 hover:bg-blue-600'
+                  className='p-2 bg-blue-800 rounded-md text-white font-bold w-8 hover:bg-blue-600'
                   onClick={() => {
                     increment(item)
                   }}

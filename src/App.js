@@ -20,6 +20,9 @@ import Admin from './Components/Admin';
 import Profile from './Components/Profile';
 import Aside from './Components/Aside';
 import Searchbar from './Context/Searchbar';
+import Categories from './Components/Categories';
+import Search from './Components/Search';
+import Searchitem from './Context/Searchitem';
 
 
 
@@ -28,6 +31,7 @@ function App() {
   const [Add, setAdd] = useState([])
   const [products,setProducts] = useState([])
   const [searchdata,setSearchdata] = useState([])
+  const [users,setUsers]=useState([]);
   const token=localStorage.getItem('email');
 
  
@@ -37,6 +41,7 @@ function App() {
 
    <section className=''>
    <BrowserRouter>
+   <Searchitem.Provider value={[users,setUsers]}>
     <Searchbar.Provider value={[searchdata,setSearchdata]}>
     <Addtocart.Provider value=''>
     <Items.Provider value={[products,setProducts]}>
@@ -56,6 +61,8 @@ function App() {
                         <Route path="cart" element={<Cart/>} />
                         <Route path="Admin" element={<Admin/>} />
                         <Route path="Profile" element={<Profile/>} />
+                        <Route path="Categories" element={<Categories/>} />
+                        <Route path="Search" element={<Search/>} />
                         <Route path="*" element={<NoPage />} />
                     </Routes>
                     </>
@@ -75,6 +82,8 @@ function App() {
                 <Route path="cart" element={<Cart/>} />
                 <Route path="Admin" element={<Admin/>} />
                 <Route path="Profile" element={<Profile/>} />
+                <Route path="Categories" element={<Categories/>} />
+                <Route path="Search" element={<Search/>} />
                 <Route path="*" element={<NoPage />} />
             </Routes>
                 
@@ -87,6 +96,7 @@ function App() {
         </Items.Provider> 
         </Addtocart.Provider>  
         </Searchbar.Provider>
+        </Searchitem.Provider>
     </BrowserRouter>
    </section>
     </>
