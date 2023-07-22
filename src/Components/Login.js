@@ -5,7 +5,7 @@ export default function Login() {
   const [passward,setPassward]=useState();
   const storedata=()=>{
     localStorage.setItem('email',email);
-    localStorage.setItem('password',passwrd);
+    // localStorage.setItem('password',passwrd);
   }
 
   return (
