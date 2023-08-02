@@ -1,10 +1,25 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import Profile from './Profile'
 
 
 
 export default function admin() {
+//     const [data,setData]=useState([]);
+    
+//       useEffect(() => {
+//     fetch("https://ecommerce-24384-default-rtdb.firebaseio.com/ecommercecontact.json")
+//       .then(response => {
+//         return response.json()
+//       })
+//       .then(res => {
+//         setData(res)
+//       })
+//   }, [])
+//   for(var key in data) {
+//     console.log(data[key].name);
+//   }
+  
   return (
     <>
         <section className='relative'>
@@ -58,6 +73,16 @@ export default function admin() {
             </div>
             
         </section>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Message</th>
+                </tr>
+            </thead>
+
+        </table>
         </section>
     </>
   )
